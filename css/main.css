@@ -1,0 +1,376 @@
+/*Bourbon mixins*/
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*Boxes settings*/
+.color1 {
+  color: #00c565; }
+
+.color2 {
+  color: #ffc200; }
+
+.color3 {
+  color: #2286e5; }
+
+.color4 {
+  color: #d21f0a; }
+
+.color5 {
+  color: #ad26ff; }
+
+.color6 {
+  color: #df2193; }
+
+html {
+  background: white;
+  color: #222;
+  font-size: 17px;
+  line-height: 1.4;
+  padding: 0; }
+
+body {
+  background: white;
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0;
+  position: relative; }
+
+nav {
+  width: 100%;
+  height: 15px;
+  background: #0274B2; }
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding-top: 80px; }
+  @media (max-width: 768px) {
+    .container {
+      max-width: calc(100% - 90px);
+      padding-top: 50px; } }
+
+img {
+  display: block;
+  width: 100%; }
+
+.logo {
+  max-width: 350px;
+  width: 100%;
+  margin-left: -10px;
+  margin-bottom: 30px; }
+
+h1 {
+  displaY: none; }
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px; }
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  opacity: .5;
+  padding-bottom: 30px; }
+
+p {
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 20px;
+  font-weight: 300; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.contact {
+  overflow: auto; }
+  .contact div {
+    float: left;
+    margin-right: 20px; }
+    @media (max-width: 768px) {
+      .contact div {
+        margin-bottom: 15px; } }
+    .contact div:last-child {
+      margin-right: 0; }
+  .contact img {
+    width: 20px;
+    float: left;
+    margin-right: 5px;
+    margin-top: -3px; }
+
+.cta {
+  width: 300px;
+  background: #0274B2;
+  margin: auto;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 23px 0 20px 0;
+  border-radius: 50px;
+  font-weight: 400;
+  margin-top: 50px;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#87e0fd+0,53cbf1+40,05abe0+100;Blue+3D+%23+16 */
+  background: #87e0fd;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #149cea 0%, #0274B2 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #149cea 0%, #0274B2 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to left, #149cea 0%, #0274B2 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#149cea', endColorstr='#05abe0',GradientType=0 );
+  /* IE6-9 */ }
+  .cta img {
+    width: 22px;
+    height: auto;
+    float: left;
+    position: absolute;
+    left: 35px;
+    top: 24px; }
+  .cta:hover {
+    opacity: .85; }
+
+.prestations {
+  padding: 30px;
+  background: #f2f2f2;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+ul {
+  padding-left: 18px !important; }
+
+ul li {
+  border-bottom: 0 !important;
+  padding: 10px;
+  list-style: initial;
+  text-indent: -10px;
+  font-size: 16px; }
+
+hr {
+  margin: 20px 0 !important;
+  opacity: .5; }
+
+.bar-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: #0274B2; }
+
+.bar-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: #0274B2; }
+
+footer {
+  width: 100%;
+  background: #0274B2;
+  height: 15px; }
+
+/*Colors, breakpoints...*/
+/*text relatives*/
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background-color: #ffbb52; }
+
+::selection {
+  background-color: #ffbb52; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers:
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/*/HTML5 Boilerplate) Clearfix, hidden, visuallyhidden, invisible...*/
+/*Header, section, article, footer...*/
+/*Buttons, dropdown...*/
+/*Galleries*/
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }

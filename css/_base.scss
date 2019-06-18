@@ -1,0 +1,279 @@
+@charset "UTF-8"; 
+//=====================================================================//
+// COLORS
+//=====================================================================//
+$gray: #212121; 
+
+$flash-color: #2fac66;
+$gray-aside: #6c6d70;
+$gray-aside2: #b7b7b7;
+
+$color1: #00c565;
+.color1 { color: $color1};
+
+$color2: #ffc200;
+.color2 { color: $color2};
+
+$color3: #2286e5;
+.color3 { color: $color3};
+
+$color4: #d21f0a;
+.color4 { color: $color4};
+
+$color5: #ad26ff;
+.color5 { color: $color5};
+
+$color6: #df2193;
+.color6 { color: $color6};
+
+//=====================================================================//
+// TRANSITIONS
+//=====================================================================//
+$transition-speed:0.3s;
+$bezier:cubic-bezier(0.455, 0.03, 0.515, 0.955); 
+
+//=====================================================================//
+// DISTANCES
+//=====================================================================//
+$columnW: 700px;
+
+//=====================================================================//
+// MORE MIXINS
+//=====================================================================//
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 500px) { @content; }
+  }
+ 
+  @else if $class == sm {
+    @media (max-width: 768px) { @content; } 
+  }
+ 
+  @else if $class == md {
+    @media (max-width: 992px) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (max-width: 1200px) { @content; }
+  }
+
+  @else if $class == xl {
+    @media (max-width: 1440px) { @content; }
+  }
+ 
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg, xl";
+  }
+}
+
+
+html { background: white; color: #222; font-size: 17px; line-height: 1.4; padding:0; }
+body 
+{ 
+    background: white; 
+    //padding-top: 90px !important; 
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
+    font-weight: 300;  
+    font-size: 14px;  
+    margin: 0;
+// background: -webkit-linear-gradient(45deg, rgb(0, 95, 151), rgb(108, 54, 149));  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(45deg, rgb(0, 95, 151), rgb(108, 54, 149)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  //padding-bottom: 50px;
+  
+  position: relative;
+
+
+}
+
+nav 
+{
+  width: 100%;
+  height: 15px;
+  background: #0274B2;
+}
+
+.container  
+{
+  max-width: 600px;
+  margin: auto;
+  //background: red;
+  padding-top: 80px;
+  @include breakpoint(sm) { 
+       max-width: calc(100% - 90px);
+       padding-top:50px; 
+  }
+}
+
+img { display:block; width: 100%; }
+
+.logo
+{
+  //margin: auto;
+  max-width: 350px;
+  width: 100%;
+  margin-left: -10px;
+  margin-bottom: 30px;
+}
+
+h1
+{
+  displaY: none;
+}
+
+h2
+{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+h3 
+{
+  text-transform: uppercase;
+  font-weight: 300;
+  opacity: .5;
+  padding-bottom: 30px;
+}
+
+p
+{
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+a 
+{
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact 
+{
+  overflow: auto;
+
+  div 
+  {
+    float: left;
+    margin-right: 20px;
+    
+    //padding: 5px 0;
+    @include breakpoint(sm) { 
+         margin-bottom: 15px;
+          //width: 100%;
+    }
+
+    &:last-child
+    {
+      margin-right: 0;
+    }
+  }
+
+  img 
+  {
+    width: 20px;
+    float: left;
+    margin-right: 5px;
+    margin-top: -3px;
+  }
+}
+
+.cta 
+{
+  width: 300px; 
+  background: #0274B2;
+  margin: auto;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 23px 0 20px 0;
+  border-radius: 50px;
+  font-weight: 400;
+  margin-top: 50px;  
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#87e0fd+0,53cbf1+40,05abe0+100;Blue+3D+%23+16 */
+background: #87e0fd; /* Old browsers */
+background: -moz-linear-gradient(left,  #149cea 0%, #0274B2 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #149cea 0%,#0274B2 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to left,  #149cea 0%,#0274B2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#149cea', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
+
+  img 
+  {
+    width: 22px; 
+    height: auto;
+    float: left;
+    position: absolute;
+    left: 35px;
+    top: 24px;
+  }
+
+  &:hover 
+  {
+    opacity: .85;
+  }
+}
+
+.prestations
+{
+  padding: 30px;
+  background: #f2f2f2;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+ul
+{
+  padding-left: 18px !important;
+}
+
+ul li
+{
+  border-bottom: 0!important;
+  padding: 10px;
+  list-style: initial;
+  text-indent: -10px; 
+  font-size: 16px;
+}
+
+hr 
+{
+  margin:20px 0 !important;
+  opacity: .5;
+}
+
+.bar-left
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: #0274B2;
+}
+
+.bar-right
+{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: #0274B2;
+
+}
+
+footer 
+{
+  width: 100%;
+  background: #0274B2;
+  height: 15px;
+}
